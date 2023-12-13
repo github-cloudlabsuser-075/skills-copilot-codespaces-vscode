@@ -1,0 +1,18 @@
+name: Email daily report
+
+on:
+  schedule:
+    - cron:  '0 6 * * *'
+
+jobs:
+  email:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Send mail
+      run: |
+        echo "Sending mail..."
+        # Here you would typically use a command or a script that sends the email.
+        # This depends on your specific setup and cannot be generalized.
